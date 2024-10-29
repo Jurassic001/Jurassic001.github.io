@@ -1,41 +1,99 @@
-body, html {
-    height: 100%;
-    margin: 0;
+/* Body and Fonts */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #4b79a1;
+  background: linear-gradient(to right, #283e51, #4b79a1);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 30px;
+  max-width: 300px;
+  flex: 1;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #666;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #4b79a1;
+  background: linear-gradient(to right, #283e51, #4b79a1);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 1em;
+}
+
+/* Footer */
+footer {
+  background: #283e51;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
   }
-  
-  .bgimg {
-    background-image: url("https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zNzgtMDkta255OWZoM2IuanBn.jpg");
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: rgba(255, 255, 255, 0.848);
-    font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
-  }
-  
-  .topleft {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-  }
-  
-  .bottomleft {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-  }
-  
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  hr {
-    margin: auto;
-    width: 40%;
-  }
-  
+}
