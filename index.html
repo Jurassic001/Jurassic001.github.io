@@ -9,32 +9,58 @@
 <body>
 
   <header>
-    <!-- Add my senior photo as well -->
     <div class="logo">
-      <img alt="MH Logo"
-        src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/119370602?v=4&mask=circle&width=75">
+      <img src="assets/img/mh_logo.png" alt="Max Haberer Logo" class="circle-crop" style="width: 150px; height: 150px;">
+      <img src="assets/img/mh_senior_photo.jpg" alt="Max Haberer Senior Photo" class="circle-crop"
+        style="width: 150px; height: 150px; object-fit: cover; object-position: center 0px;">
     </div>
-    <h1>Max Haberer</h1>
+    <h1 style="font-size: 3em; font-weight: regular;">Max Haberer</h1>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Expand on the stuff in my profile README</p>
+    <h3>Hi! I'm Max Haberer, and I'm a high school student in Texas!</h3>
+    <div class="tile-left">
+      <p>I'm currently working on programming, electrical, and mechanical design for the
+        <a href="https://theavr.org/2024" style="color: #e0e0e0">2024 Advanced
+          Vertical Robotics competition</a>, as a member of Highland Park High School Robotics. As part of this, I'm
+        using
+        Python, C++, PX4, MavLink, and QGroundControl to automate drone movement and task
+        execution, including transporting cargo with an imbedded electromagnet and scanning areas of thermal
+        activity.
+      </p>
+    </div>
+    <div class="tile-right">
+      <p>I'm working on a little passion project at the moment, <a href="https://github.com/Jurassic001/simple_ytdl"
+          style="color: #e0e0e0"><strong>simple_ytdl</strong></a>, a
+        lightweight &
+        easy-to-use program for downloading Youtube videos and audio at high quality! Feel free to check it out!</p>
+    </div>
+    <div class="tile-left">
+      <p>I'm currently applying to college! I hope to major in Electrical & Computer
+        Engineering, so that I can focus
+        on my interests in robotics and programming.</p>
+    </div>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="cards">
-      <div class="card">
-        <h3>Bell AVR 2024</h3>
-        <p>Describe it</p>
-        <!-- Add a link to the repo -->
-      </div>
-      <div class="card">
-        <h3>simple_ytdl</h3>
-        <p>Describe this as well</p>
-        <!-- Also add a link to this one -->
-      </div>
+      <a href="https://github.com/Jurassic001/Bell-AVR-2024" target="_blank" class="card-link">
+        <div class="card">
+          <h3>Bell AVR 2024</h3>
+          <p>Jetson Nano Software, PCC/PX4 Firmware, and GUI for the "AVR" drone, part of the 2024 Bell Advanced
+            Vertical Robotics Competition. Property of the Highland Park Scots - Team Zephyrus</p>
+        </div>
+      </a>
+      <a href="https://github.com/Jurassic001/simple_ytdl" target="_blank" class="card-link">
+        <div class="card">
+          <h3>simple_ytdl</h3>
+          <p>An easy-to-use, text-based program for downloading Youtube videos at high quality, utilizing yt-dlp and
+            FFmpeg
+          </p>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -58,9 +84,18 @@
   <section id="skills">
     <h2>Skills</h2>
     <div class="badges">
-      <span class="badge">Advanced Python Techniques (Multithreading, Program compilation, Product delivery)</span>
-      <span class="badge">Git and Github</span>
-      <span class="badge">Automation and something significant</span>
+      <div class="badge">
+        <h3>Advanced Python Techniques</h3>
+        <p>Multithreading, Program Compilation, Product Delivery</p>
+      </div>
+      <div class="badge">
+        <h3>Project Management</h3>
+        <p>Git, GitHub, GitHub Actions, Programming Workflow Optimization</p>
+      </div>
+      <div class="badge">
+        <h3>Creativity</h3>
+        <p>Adobe Photoshop, Illustrator, Premiere Pro</p>
+      </div>
     </div>
   </section>
 
