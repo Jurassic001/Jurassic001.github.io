@@ -1,41 +1,189 @@
-body, html {
-    height: 100%;
-    margin: 0;
+/* Body and Fonts */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #333;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #4b79a1;
+  background: linear-gradient(to right, #283e51, #4b79a1);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  margin: auto;
+  right: 75px;
+}
+
+.logo img {
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img:nth-child(1) {
+  z-index: 2;
+  transform: translateX(10%);
+}
+
+.logo img:nth-child(2) {
+  z-index: 1;
+  transform: translateX(-10%);
+}
+
+.logo:hover img:nth-child(1) {
+  transform: translateX(60%);
+}
+
+.logo:hover img:nth-child(2) {
+  transform: translateX(-60%);
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 30px;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #666;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Badges */
+.badges {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.badge {
+  background: #4b79a1;
+  background: linear-gradient(to right, #283e51, #4b79a1);
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 30px;
+  font-size: 1em;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+}
+
+.badge h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.badge p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #283e51;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
   }
-  
-  .bgimg {
-    background-image: url("https://images.rawpixel.com/image_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0zNzgtMDkta255OWZoM2IuanBn.jpg");
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: rgba(255, 255, 255, 0.848);
-    font-family: "Times New Roman", Times, serif;
-    font-size: 25px;
-  }
-  
-  .topleft {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-  }
-  
-  .bottomleft {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-  }
-  
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  hr {
-    margin: auto;
-    width: 40%;
-  }
-  
+}
+
+/* tiles */
+.tile-left,
+.tile-right {
+  background: linear-gradient(to left, #283e51, #4b79a1);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  color: #f0f0f0;
+  font-size: 1em;
+  text-align: justify;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+}
+
+.tile-right {
+  background: linear-gradient(to right, #283e51, #4b79a1);
+}
+
+.tile-left:hover,
+.tile-right:hover {
+  transform: scale(1.05);
+}
