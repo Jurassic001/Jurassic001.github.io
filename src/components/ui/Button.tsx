@@ -53,6 +53,7 @@ export default function Button({
         href={href}
         className={classes}
         aria-label={ariaLabel}
+        onClick={onClick}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
         {children}

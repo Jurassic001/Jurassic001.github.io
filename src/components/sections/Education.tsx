@@ -20,10 +20,10 @@ export default function Education() {
                 </h3>
                 <p className="text-sm text-[var(--color-text-secondary)]">
                   {edu.degree}
-                  {edu.field ? ` — ${edu.field}` : ""}
+                  {edu.field ? ` - ${edu.field}` : ""}
                 </p>
                 <p className="mt-1 text-xs text-[var(--color-text-muted)]">
-                  {edu.startDate} — {edu.endDate}
+                  {edu.startDate} - {edu.endDate}
                 </p>
               </div>
             </div>

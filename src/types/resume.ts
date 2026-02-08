@@ -55,7 +55,6 @@ export interface EducationEntry {
 export interface SkillCategory {
   name: string;
   skills: string[];
-  highlighted: string[];
 }
 
 export interface Award {

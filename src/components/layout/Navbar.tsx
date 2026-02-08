@@ -53,18 +53,18 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         </button>
 
         {/* Desktop nav links */}
-        <ul className="hidden items-center gap-1 md:flex" role="menubar">
+        <ul className="hidden items-center gap-1 md:flex">
           {NAV_ITEMS.map((item) => (
-            <li key={item.id} role="none">
+            <li key={item.id}>
               <button
-                role="menuitem"
-                onClick={() => handleNavClick(item.id)}
-                className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
-                  activeId === item.id
-                    ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
-                    : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
-                )}
+          onClick={() => handleNavClick(item.id)}
+          className={cn(
+            "rounded-lg px-3 py-2 text-sm font-medium transition-colors cursor-pointer",
+            activeId === item.id
+              ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
+              : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+          )}
+          aria-current={activeId === item.id ? "page" : undefined}
               >
                 {item.label}
               </button>

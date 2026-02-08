@@ -27,7 +27,7 @@ export default function About() {
           <p className="text-lg leading-relaxed text-[var(--color-text-secondary)]">
             Currently pursuing a <strong className="text-[var(--color-text-primary)]">B.S. in Computer Engineering</strong> at{" "}
             <strong className="text-[var(--color-text-primary)]">Texas A&amp;M University</strong>, where I'm also an{" "}
-            <strong className="text-[var(--color-text-primary)]">Avionics Engineer</strong> on the Sounding Rocketry Team — developing embedded systems for telemetry, onboard logic, and radar on high-powered rockets.
+            <strong className="text-[var(--color-text-primary)]">Avionics Engineer</strong> on the Sounding Rocketry Team, developing embedded systems for telemetry, onboard logic, and radar on high-powered rockets.
           </p>
           <p className="text-lg leading-relaxed text-[var(--color-text-secondary)]">
             When I'm not building embedded systems or writing firmware, you'll find me working on open-source projects, experimenting with 3D printing, or tinkering with new development tools.

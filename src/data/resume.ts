@@ -76,7 +76,7 @@ const resumeData: ResumeData = {
     {
       id: "helm-tamuhack",
       company: "TAMUhack '26",
-      role: "Helm — Hackathon Winner",
+      role: "Helm - Hackathon Winner",
       startDate: "2026",
       endDate: "2026",
       bullets: [
@@ -179,7 +179,7 @@ const resumeData: ResumeData = {
   education: [
     {
       id: "tamu",
-      institution: "Texas A&M University — College of Engineering",
+      institution: "Texas A&M University - College of Engineering",
       degree: "B.S.",
       field: "Computer Engineering (CPEN)",
       startDate: "Aug 2025",
@@ -193,7 +193,7 @@ const resumeData: ResumeData = {
       startDate: "Sep 2021",
       endDate: "May 2025",
       honors: [
-        "Boy Scouts of America — Eagle Scout",
+        "Boy Scouts of America - Eagle Scout",
         "National Honors Society",
         "Young Men's Service League",
       ],
@@ -213,7 +213,6 @@ const resumeData: ResumeData = {
         "CubeIDE",
         "VS Code",
       ],
-      highlighted: ["Python", "C++", "Rust", "Docker"],
     },
     {
       name: "Hardware & Equipment",
@@ -224,7 +223,6 @@ const resumeData: ResumeData = {
         "Multimeters",
         "Standard Tools",
       ],
-      highlighted: ["STM32 Microcontrollers", "3D Printing"],
     },
     {
       name: "Engineering & Design",
@@ -237,7 +235,6 @@ const resumeData: ResumeData = {
         "Adobe Illustrator",
         "Adobe Premiere Pro",
       ],
-      highlighted: ["Systems Engineering", "CI/CD"],
     },
   ],
 
@@ -246,10 +243,10 @@ const resumeData: ResumeData = {
       title: "TAMUhack '26 Winner",
       issuer: "TAMUhack",
       date: "2026",
-      description: "Won TAMUhack '26 with Helm — a real-time physiological sensing application.",
+      description: "Won TAMUhack '26 with Helm, a real-time physiological sensing application.",
     },
     {
-      title: "Judge's Choice Award — Autonomous Flight",
+      title: "Judge's Choice Award - Autonomous Flight",
       issuer: "Bell Advanced Vertical Robotics",
       date: "2024",
       description:

@@ -52,7 +52,7 @@ export default function Hero() {
               View Resume
             </Button>
             <Button
-              href={github?.url}
+              href={github!.url}
               external
               variant="secondary"
               size="lg"
@@ -64,12 +64,6 @@ export default function Hero() {
               href="#contact"
               variant="ghost"
               size="lg"
-              onClick={() => {
-                const el = document.getElementById("contact");
-                if (el) {
-                  el.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
             >
               Get in Touch
             </Button>

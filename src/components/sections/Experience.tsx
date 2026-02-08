@@ -87,7 +87,7 @@ function TimelineEntry({
 
       {/* Date */}
       <p className="mt-1 text-sm text-[var(--color-text-muted)]">
-        {entry.startDate} — {entry.endDate}
+        {entry.startDate} - {entry.endDate}
       </p>
 
       {/* Bullets */}
