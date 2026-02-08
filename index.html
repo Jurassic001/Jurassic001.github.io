@@ -1,117 +1,54 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <title>Jurassic.github.io</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- Shoutout realfavicongenerator.net -->
-  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Jurassic001" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-</head>
+    <title>Max Haberer | Computer Engineering Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Max Haberer - Computer Engineering student at Texas A&amp;M University. Software development, embedded systems, robotics, and aerospace innovation."
+    />
+    <meta name="author" content="Max Haberer" />
 
-<body>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Max Haberer | Computer Engineering Portfolio" />
+    <meta
+      property="og:description"
+      content="Computer Engineering student at Texas A&amp;M. Software development, embedded systems, robotics, and aerospace."
+    />
+    <meta property="og:image" content="/img/mh_headshot.jpg" />
+    <meta property="og:url" content="https://jurassic001.github.io" />
+    <meta property="og:site_name" content="Max Haberer Portfolio" />
 
-  <header>
-    <div class="logo">
-      <!-- Source logo from GitHub profile pic since it'll have the most up-to-date logo -->
-      <!-- <img src="assets/img/mh_logo.png" alt="Max Haberer Logo" class="circle-crop" style="width: 150px; height: 150px;"> -->
-      <img id="profile-logo" fetchpriority="high" src="https://avatars.githubusercontent.com/u/119370602?v=4" alt="Max Haberer Logo"class="circle-crop" style="width: 150px; height: 150px;">
-      <!-- Unfortunately you can't easily fetch current profile picture from LinkedIn, so I have to use a hardcoded headshot for the time.
-      Maybe that's a future TODO item, I bet you could do it with a little scripting. Note that the CV would need to somehow reference the headshot as well, for the preview pic -->
-      <img id="headshot" data-src="assets/img/mh_headshot.jpg" alt="Max Haberer Professional Photo" class="circle-crop" style="width: 150px; height: 150px; object-fit: cover; object-position: center 0px;">
-    </div>
-    <h1 style="font-size: 3em; font-weight: regular;">Max Haberer</h1>
-  </header>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Max Haberer | Computer Engineering Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Computer Engineering student at Texas A&amp;M. Software development, embedded systems, robotics, and aerospace."
+    />
+    <meta name="twitter:image" content="https://jurassic001.github.io/img/mh_headshot.jpg" />
 
-  <section id="about">
-    <h2>About Me</h2>
-    <h3>Hi! I'm Max Haberer, and I'm a high school student at Texas A&M, studying Computer Engineering!</h3>
-    <a href="https://jurassic001.github.io/autoCV/cv.pdf" target="_blank" class="card-link">
-        <div class="card" style="background: #4b79a1; color: #f0f0f0;">
-          <h3>My Resume</h3>
-          <p style="color: #f0f0f0;">Click here to view my resume! Other than this my website is pretty barebones at the minute. This is more of a passion project than anything, all serious experience will be listed on my resume. Check back later to see if I've made any major additions!</p>
-        </div>
-    </a>
-    <!-- <div class="tile-left">
-      <p>
-        I just wrapped up the <a href="https://theavr.org/2024" style="color: #e0e0e0">2024 Bell AVR competition</a>
-        season, placing 4th at the national championship as a member of team Zephyrus! I was the lead software
-        developer, electrical, and mechanical engineer for the AVR drone this year.
-        I used Python, C++, PX4, MavLink, and QGroundControl to automate drone movement and task
-        execution, including transporting cargo with an imbedded electromagnet and scanning areas of thermal
-        activity.
-        Some highlights of the season include controlling an electromagnet using a switch on the AVR's remote
-        controller, and earning a Judge's Choice award for our autonomous flight capabilities.
-        I've learned a lot from this experience and I look forward to educating younger members of the club, preparing
-        them to tackle the challenges of next year without me or the other seniors.
-      </p>
-    </div>
-    <div class="tile-right">
-      <p>
-        I'm working on a little passion project at the moment, <a href="https://github.com/Jurassic001/simple_ytdl"
-          style="color: #e0e0e0"><strong>simple_ytdl</strong></a>, a lightweight & easy-to-use program for
-        downloading Youtube videos and audio at high quality! Feel free to check it out!
-      </p>
-    </div>
-    <div class="tile-left">
-      <p>
-        I'm currently applying to college! I hope to major in Electrical & Computer
-        Engineering, so that I can focus on my interests in robotics and programming.
-      </p>
-    </div> -->
-  </section>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Max Haberer" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
 
-  <!-- <section id="projects">
-    <h2>Projects</h2>
-    <div class="cards">
-      <a href="https://github.com/Jurassic001/AVR-2024" target="_blank" class="card-link">
-        <div class="card">
-          <h3>Bell AVR 2024</h3>
-          <p>Jetson Nano Software, PCC/PX4 Firmware, and GUI for the "AVR" drone, part of the 2024 Bell Advanced
-            Vertical Robotics Competition. Property of the Highland Park Scots - Team Zephyrus</p>
-        </div>
-      </a>
-      <a href="https://github.com/Jurassic001/simple_ytdl" target="_blank" class="card-link">
-        <div class="card">
-          <h3>simple_ytdl</h3>
-          <p>An easy-to-use, text-based program for downloading Youtube videos at high quality, utilizing yt-dlp and
-            FFmpeg
-          </p>
-        </div>
-      </a>
-    </div>
-  </section> -->
-
-  <!-- <section id="skills">
-    <h2>Skills</h2>
-    <div class="badges">
-      <div class="badge">
-        <h3>Advanced Python Techniques</h3>
-        <p>Multithreading, Program compilation, Product delivery, API usage, Integrated Device Communication</p>
-      </div>
-      <div class="badge">
-        <h3>Project Management</h3>
-        <p>Git & GitHub, Managing semantic tags/releases, GitHub Actions, Programming workflow optimization w/
-          VSCode API and GitHub Copilot</p>
-      </div>
-      <div class="badge">
-        <h3>Creativity</h3>
-        <p>Adobe Photoshop, Illustrator, Premiere Pro</p>
-      </div>
-    </div>
-  </section> -->
- 
-
-  <footer>
-    <p>Jurassic.github.io</p>
-  </footer>
-  
-  <script defer src="main.js"></script>
-
-</body>
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
