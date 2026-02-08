@@ -1,4 +1,4 @@
-# Max Haberer — Portfolio
+# Max's Dev Portfolio
 
 A modern, responsive developer portfolio built with **React**, **TypeScript**, **Tailwind CSS v4**, and **Vite**. Dark/light mode, single-page layout with smooth scroll navigation, and all content driven from a single data file.
 
