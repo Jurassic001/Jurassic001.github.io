@@ -81,11 +81,7 @@ export default function Projects() {
 
       {/* Other projects — smaller cards */}
       {other.length > 0 && (
-        <>
-          <h3 className="mt-12 mb-6 text-lg font-semibold text-[var(--color-text-primary)]">
-            More Projects
-          </h3>
-          <div className="grid gap-4 sm:grid-cols-2">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2">
             {other.map((project) => (
               <Card key={project.id} className="flex flex-col">
                 <div className="flex items-start justify-between gap-3">
@@ -128,7 +124,6 @@ export default function Projects() {
               </Card>
             ))}
           </div>
-        </>
       )}
     </Section>
   );
