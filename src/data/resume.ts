@@ -16,8 +16,8 @@ const resumeData: ResumeData = {
     email: "mhaberer25@gmail.com",
     website: "https://jurassic001.github.io",
     location: "College Station, TX",
-    image: "/img/mh_headshot.jpg",
-    avatarUrl: "https://avatars.githubusercontent.com/u/119370602?v=4",
+    image: "https://avatars.githubusercontent.com/u/119370602?v=4",
+    avatarUrl: "/img/mh_headshot.jpg",
     profiles: [
       {
         network: "GitHub",

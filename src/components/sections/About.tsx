@@ -14,7 +14,7 @@ export default function About() {
             alt={`${basics.name} avatar`}
             width={200}
             height={200}
-            className="h-48 w-48 rounded-2xl border-2 border-[var(--color-border)] object-cover shadow-md"
+            className="h-48 w-48 rounded-2xl border-2 border-[var(--color-border)] object-cover object-top shadow-md"
             loading="lazy"
           />
         </div>
