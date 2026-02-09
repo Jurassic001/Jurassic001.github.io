@@ -12,12 +12,6 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen items-center px-4 pt-20 sm:px-6"
     >
-      {/* Subtle background gradient orbs */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-brand-500/5 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full bg-accent-400/5 blur-3xl" />
-      </div>
-
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-10 lg:flex-row lg:gap-16">
         {/* Text content */}
         <motion.div
