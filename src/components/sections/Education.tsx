@@ -9,7 +9,7 @@ export default function Education() {
       {/* Education */}
       <div className="grid gap-6 md:grid-cols-2">
         {resumeData.education.map((edu) => (
-          <Card key={edu.id} hover={false} className="flex flex-col gap-3">
+          <Card key={edu.id} className="flex flex-col gap-3">
             <div className="flex items-start gap-3">
               <div className="rounded-lg bg-brand-500/10 p-2 text-brand-500">
                 <GraduationCap size={22} />
@@ -54,7 +54,6 @@ export default function Education() {
             {resumeData.awards.map((award) => (
               <Card
                 key={award.title}
-                hover={false}
                 className="flex flex-col gap-2"
               >
                 <h4 className="font-semibold text-[var(--color-text-primary)]">

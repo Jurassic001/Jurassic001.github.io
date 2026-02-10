@@ -1,6 +1,7 @@
 import resumeData from "../../data/resume";
 import Section from "../layout/Section";
 import Badge from "../ui/Badge";
+import Card from "../ui/Card";
 
 export default function Skills() {
   return (
@@ -11,10 +12,7 @@ export default function Skills() {
     >
       <div className="grid gap-8 md:grid-cols-3">
         {resumeData.skills.map((category) => (
-          <div
-            key={category.name}
-            className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6"
-          >
+          <Card key={category.name}>
             <h3 className="mb-4 text-base font-semibold text-[var(--color-text-primary)]">
               {category.name}
             </h3>
@@ -25,7 +23,7 @@ export default function Skills() {
                 </Badge>
               ))}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </Section>
