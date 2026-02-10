@@ -58,10 +58,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
       className={cn(
         "fixed z-50 bg-[var(--color-bg-card)] transition-[border-color] duration-300",
         scrolled
-          ? "top-4 left-4 right-4 rounded-2xl border border-[var(--color-border)] shadow-lg md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-auto bg-glass"
+          ? "top-4 right-4 w-auto rounded-2xl border border-[var(--color-border)] shadow-lg bg-glass md:left-1/2 md:right-auto md:-translate-x-1/2"
           : "top-0 right-0 left-0 border-b border-[var(--color-border)]"
       )}
-      layout
+      layout="position"
       transition={{ type: "spring", stiffness: 400, damping: 35 }}
       role="banner"
     >
