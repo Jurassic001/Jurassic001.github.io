@@ -24,6 +24,8 @@
   --color-surface-dark: #0f172a;
   --color-surface-card-light: #ffffff;
   --color-surface-card-dark: #1e293b;
+
+  --aggie-maroon: #500000;
 }
 
 /* ── Base layer ── */
@@ -95,5 +97,10 @@
     background: color-mix(in srgb, var(--color-bg-card) 80%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+  }
+
+  .bg-overlay {
+    background: color-mix(in srgb, var(--color-bg) 60%, transparent);
+    transition: background 0.3s ease;
   }
 }
