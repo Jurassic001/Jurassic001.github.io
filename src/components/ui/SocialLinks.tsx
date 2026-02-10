@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import resumeData from "../../data/resume";
 import { cn } from "../../utils/cn";
 
@@ -30,11 +30,6 @@ export default function SocialLinks({
       icon: <Linkedin size={size} />,
       label: "LinkedIn",
       href: linkedin?.url ?? "#",
-    },
-    {
-      icon: <Mail size={size} />,
-      label: "Email",
-      href: `mailto:${resumeData.basics.email}`,
     },
   ];
 
