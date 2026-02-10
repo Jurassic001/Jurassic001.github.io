@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
@@ -24,7 +23,9 @@ const SCROLL_THRESHOLD = 50;
 
 export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(
+    () => window.scrollY > SCROLL_THRESHOLD
+  );
 
   const sectionIds = useMemo(() => NAV_ITEMS.map((i) => i.id), []);
   const activeId = useScrollSpy(sectionIds);
@@ -54,91 +55,93 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   };
 
   return (
-    <motion.header
-      className={cn(
-        "fixed z-50 bg-[var(--color-bg-card)] transition-[border-color] duration-300",
-        scrolled
-          ? "top-4 right-4 w-auto rounded-2xl border border-[var(--color-border)] shadow-lg bg-glass md:left-1/2 md:right-auto md:-translate-x-1/2"
-          : "top-0 right-0 left-0 border-b border-[var(--color-border)]"
-      )}
-      layout="position"
-      transition={{ type: "spring", stiffness: 400, damping: 35 }}
+    <header
+      className="fixed top-0 right-0 left-0 z-50 pointer-events-none"
       role="banner"
     >
-      <nav
+      <div
         className={cn(
-          "flex items-center",
+          "pointer-events-auto transition-all duration-300 ease-out",
           scrolled
-            ? "gap-1 px-2 py-2"
-            : "mx-auto max-w-6xl justify-between px-4 py-3 sm:px-6"
+            ? "w-fit mt-4 ml-auto mr-4 rounded-2xl border border-[var(--color-border)] shadow-lg bg-glass md:mx-auto"
+            : "w-full bg-[var(--color-bg-card)] border-b border-[var(--color-border)]"
         )}
-        aria-label="Main navigation"
       >
-        {/* Desktop nav links */}
-        <ul className="hidden items-center gap-1 md:flex">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.id}>
-              <button
-                onClick={() => handleNavClick(item.id)}
-                className={cn(
-                  "rounded-lg px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap",
-                  activeId === item.id
-                    ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
-                    : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
-                )}
-                aria-current={activeId === item.id ? "page" : undefined}
-              >
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        {/* Spacer to push right-side controls when not scrolled */}
-        {!scrolled && <div className="flex-1 md:hidden" />}
-
-        {/* Right side: theme toggle + mobile menu button */}
-        <div className="flex items-center gap-1">
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle navigation menu"
-            aria-expanded={mobileOpen}
-            className="rounded-lg p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10 md:hidden cursor-pointer"
-          >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
-        </div>
-      </nav>
-
-      {/* Mobile dropdown */}
-      {mobileOpen && (
-        <div
+        <nav
           className={cn(
-            "border-t border-[var(--color-border)] bg-[var(--color-bg-card)] md:hidden",
-            scrolled && "rounded-b-2xl"
+            "flex items-center transition-[gap,padding] duration-300 ease-out",
+            scrolled
+              ? "gap-1 px-2 py-2"
+              : "mx-auto max-w-6xl justify-between px-4 py-3 sm:px-6"
           )}
+          aria-label="Main navigation"
         >
-          <ul className="flex flex-col px-4 py-2" role="menu">
+          {/* Desktop nav links */}
+          <ul className="hidden items-center gap-1 md:flex">
             {NAV_ITEMS.map((item) => (
-              <li key={item.id} role="none">
+              <li key={item.id}>
                 <button
-                  role="menuitem"
                   onClick={() => handleNavClick(item.id)}
                   className={cn(
-                    "w-full rounded-lg px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
+                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap",
                     activeId === item.id
                       ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
                       : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
                   )}
+                  aria-current={activeId === item.id ? "page" : undefined}
                 >
                   {item.label}
                 </button>
               </li>
             ))}
           </ul>
-        </div>
-      )}
-    </motion.header>
+
+          {/* Spacer to push right-side controls when not scrolled */}
+          {!scrolled && <div className="flex-1 md:hidden" />}
+
+          {/* Right side: theme toggle + mobile menu button */}
+          <div className="flex items-center gap-1">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileOpen}
+              className="rounded-lg p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10 md:hidden cursor-pointer"
+            >
+              {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
+        </nav>
+
+        {/* Mobile dropdown */}
+        {mobileOpen && (
+          <div
+            className={cn(
+              "border-t border-[var(--color-border)] bg-[var(--color-bg-card)] md:hidden",
+              scrolled && "rounded-b-2xl"
+            )}
+          >
+            <ul className="flex flex-col px-4 py-2" role="menu">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.id} role="none">
+                  <button
+                    role="menuitem"
+                    onClick={() => handleNavClick(item.id)}
+                    className={cn(
+                      "w-full rounded-lg px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
+                      activeId === item.id
+                        ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
+                        : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                    )}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </header>
   );
 }
