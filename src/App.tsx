@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import ColorBends from './components/reactbits/ColorBends';
@@ -44,6 +45,7 @@ export default function App() {
       </main>
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
