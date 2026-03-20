@@ -5,10 +5,10 @@ My developer portfolio. Built with React 19, TypeScript, Vite 6, Tailwind CSS v4
 ## Dev
 
 ```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build
-npm run preview
+pnpm install
+pnpm dev         # http://localhost:5173
+pnpm build
+pnpm preview
 ```
 
 ## Content

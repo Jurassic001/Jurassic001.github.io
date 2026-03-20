@@ -29,9 +29,9 @@ This is the single source of truth — every section component imports `resumeDa
 ## Commands
 
 ```bash
-npm run dev      # Vite dev server on :5173
-npm run build    # tsc -b && vite build (TypeScript checked first)
-npm run preview  # Preview production build locally
+pnpm dev         # Vite dev server on :5173
+pnpm build       # tsc -b && vite build (TypeScript checked first)
+pnpm preview     # Preview production build locally
 ```
 
 ## Key Files

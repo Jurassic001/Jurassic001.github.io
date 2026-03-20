@@ -7,12 +7,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Vite dev server on http://localhost:5173
-npm run build    # Type-check (tsc -b) then Vite production build
-npm run preview  # Serve the production build locally
+pnpm dev         # Vite dev server on http://localhost:5173
+pnpm build       # Type-check (tsc -b) then Vite production build
+pnpm preview     # Serve the production build locally
 ```
 
-There is no test runner or linter configured. TypeScript errors surface during `npm run build`.
+There is no test runner or linter configured. TypeScript errors surface during `pnpm build`.
 
 ## Architecture Overview
 
